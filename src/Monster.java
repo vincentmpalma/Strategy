@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Objects;
 
+//github repo: https://github.com/vincentmpalma/Strategy
 public abstract class Monster {
     Integer hp;
     Integer xp = 10;
