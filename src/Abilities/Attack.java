@@ -1,3 +1,7 @@
+package Abilities;
+
+import Monsters.Monster;
+
 public interface Attack extends Ability{
 
     /**
@@ -5,5 +9,5 @@ public interface Attack extends Ability{
      * @param monster the target of the attack
      * @return null (for now)
      */
-    Integer attack (Monster monster);
+     Integer attack (Monster monster);
 }

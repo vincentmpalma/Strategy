@@ -1,3 +1,7 @@
+package Abilities;
+
+import Monsters.Monster;
+
 public class RangedAttack implements Attack{
 
     Monster attacker;
@@ -5,7 +9,7 @@ public class RangedAttack implements Attack{
 
     /**
      * set what the attacker is
-     * @param attacker the Monster doing the attacking
+     * @param attacker the Monsters.Monster doing the attacking
      */
     public RangedAttack(Monster attacker) {
         this.attacker = attacker;
@@ -21,7 +25,7 @@ public class RangedAttack implements Attack{
     public Integer attack(Monster target) {
         String message = attacker + " uses a range attack on " + target;
         System.out.println(message);
-        return null;
+        return attacker.getStr() - target.getStr();;
     }
 
 }

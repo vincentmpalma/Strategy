@@ -1,13 +1,13 @@
-import com.sun.jdi.connect.Connector;
+package Abilities;
+import Monsters.Monster;
 
 public class MeleeAttack implements Attack{
 
     Monster attacker;
 
-
     /**
      * set what the attacker is
-     * @param attacker the Monster doing the attacking
+     * @param attacker the Monsters.Monster doing the attacking
      */
     public MeleeAttack(Monster attacker) {
         this.attacker = attacker;
@@ -23,7 +23,7 @@ public class MeleeAttack implements Attack{
     public Integer attack(Monster target) {
         String message = attacker + " uses a melee on " + target;
         System.out.println(message);
-        return null;
+        return attacker.getStr() - target.getStr();
     }
 
 
