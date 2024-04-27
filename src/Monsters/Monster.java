@@ -70,22 +70,21 @@ public abstract class Monster {
     }
 
     public Integer attackTarget(Monster target){
-
-
-        return 0;
+        Integer damage = attack.attack(target);
+        target.takeDamage(damage);
+        return damage;
     }
 
     boolean takeDamage(Integer damage){
 
-        hp -= damage;
-
         if(damage > 0){
+            hp -= damage;
             System.out.println("The creature was hit for " + damage + " damage");
         }
 
 
         if(hp <= 0 ){
-            System.out.println("Oh no! teh creature has perished");
+            System.out.println("Oh no! the creature has perished");
         }
 
         System.out.println(this.toString());
